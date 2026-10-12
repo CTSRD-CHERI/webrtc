@@ -78,7 +78,7 @@
 typedef void* SockOptArg;
 #endif  // WEBRTC_POSIX
 
-#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC)
+#if defined(WEBRTC_POSIX) && !defined(WEBRTC_MAC) && !defined(WEBRTC_BSD)
 int64_t GetSocketRecvTimestamp(int socket) {
   struct timeval tv_ioctl;
   int ret = ioctl(socket, SIOCGSTAMP, &tv_ioctl);
