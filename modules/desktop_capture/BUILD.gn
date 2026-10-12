@@ -417,6 +417,8 @@ rtc_library("desktop_capture") {
 
       "Xrender",
       "Xtst",
+      "X11-xcb",
+      "xcb-shm"
     ]
   }
 
